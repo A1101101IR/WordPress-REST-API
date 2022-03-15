@@ -7,11 +7,12 @@
 
 <body <?php body_class(); ?>>
 
-<header>
-  this is header
-  <?php wp_nav_menu(
-    array(
-      'theme-location' => 'top-menu',
-    )
-  );?>
-</header>
+    <header>
+        this is header
+        <?php wp_nav_menu(
+            array(
+                'theme-location' => 'top-menu',
+                'menu_class' => 'navbar_ul'
+            )
+        ); ?>
+    </header>
