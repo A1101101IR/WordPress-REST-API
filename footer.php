@@ -1,5 +1,5 @@
 <?php wp_footer(); ?>
-<footer>
+<footer class="footer">
   <?php
   $firstname = get_the_author_meta('first_name');
   $lastname = get_the_author_meta('last_name');

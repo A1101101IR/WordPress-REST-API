@@ -9,6 +9,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 header {
   width: 100%;
@@ -37,31 +38,35 @@ header {
     text-decoration: none;
     color: black;
 }
-
+.navbar-body a {
+  text-decoration: none;
+  color: black;
+}
 .post-card {
   max-width: 1280px;
   display: flex;
-  border: 1px solid red;
-  margin-bottom: 25px;
+  border-bottom: 1px solid red;
+  margin: 25px;
+  padding-bottom: 10px
 }
 .card-img {
-  width: 300px
+  display: flex;
+  width: 800px;
   margin-right: 25px;
 }
-.post-card .card-img img {
-  height: 400px;
-  width: 500px;
-}
-.post-card .card-text {
+.card-text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+.card-text a {
+  padding: 10px;
+  border: 1px solid black;
+}
 .content-section {
   max-width: 1280px;
 }
-footer {
-    position: fixed;
+.footer {
     bottom: 0;
     margin-bottom: 20px;
 }
