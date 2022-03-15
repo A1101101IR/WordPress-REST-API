@@ -4,25 +4,64 @@ Author: Amir Nabizadeh
 */
 body {
   margin: 0;
-  padding: 0:
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 header {
   width: 100%;
-  height: 80px;
+  height: 100px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: gray;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
 }
-a {
-  text-decoration: none;
-  color: black;
-  background-color: gray;
-  padding: 5px;
+.navbar-body {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+.navbar_ul {
+    list-style-type: none;
+    display: flex;
+}
+.navbar_ul li a {
+    font-size: 18px;
+    margin-left: 35px;
+    text-decoration: none;
+    color: black;
+}
+
 .post-card {
-  max-width: 800px;
-  height: auto;
+  max-width: 1280px;
+  display: flex;
   border: 1px solid red;
   margin-bottom: 25px;
+}
+.card-img {
+  width: 300px
+  margin-right: 25px;
+}
+.post-card .card-img img {
+  height: 400px;
+  width: 500px;
+}
+.post-card .card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content-section {
+  max-width: 1280px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 20px;
 }
