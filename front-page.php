@@ -15,10 +15,8 @@
                 <h3><?php the_title();?></h3>
                 <?php the_excerpt();?>
               </div>
-              <a href="<?php the_permalink();?>">Read more</a>
+              <a href="<?php the_permalink();?>"><button>Read more</button></a>
             </div>
-
-
         </div>
     <?php endwhile; endif;?>
 </section>

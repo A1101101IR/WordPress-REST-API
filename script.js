@@ -1,6 +1,7 @@
-console.log("hello world")
+console.log("js script is working!")
 
 var hello = "hello";
+
 
 
 
@@ -18,4 +19,3 @@ function mydata() {
 	  console.error(err);
   });
 }
-mydata();

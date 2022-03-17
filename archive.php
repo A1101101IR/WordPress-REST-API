@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
 <section class="content-body">
-  <h1><?php single_cat_title(); ?></h1>
 
+    <h1><?php single_cat_title(); ?></h1>
     <?php if (have_posts()) : while (have_posts()) : the_post();?>
         <div class="post-card">
             <div class="card-img">
@@ -17,10 +17,9 @@
               </div>
               <a href="<?php the_permalink();?>">Read more</a>
             </div>
-
-
         </div>
     <?php endwhile; endif;?>
+
 </section>
 
 <?php get_footer(); ?>
