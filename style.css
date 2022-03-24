@@ -10,6 +10,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100%;
   font-family: 'Abril Fatface', cursive;
   font-family: 'Poppins', sans-serif;
   font-family: 'Spline Sans', sans-serif;
@@ -71,14 +72,42 @@ header {
   border: 1px solid black;
 }
 .footer {
-    bottom: 0;
-    margin-bottom: 20px;
+  max-width: 1280px;
+  width: 100%;
+}
+.footer-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-content div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-content div img {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
 }
 form {
   display: flex;
   flex-direction: column;
 }
+.text-input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ececec;
+  margin-bottom: 20px;
 
+}
+.text-input:hover {
+  box-shadow: 4px 5px 10px 1px gray;
+}
+.title {
+  height: 25px;
+}
 
 
 /* page css */

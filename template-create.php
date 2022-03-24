@@ -7,9 +7,13 @@ Template Name: Create page
 <section class="content-section">
     <h2>Create Post</h2>
     <form class="" action="index.html" method="post">
-        <input type="text" name="title" id="title" placeholder="Title">
-        <textarea id="content" name="name" rows="8" cols="80" placeholder="Content"></textarea>
+        <input type="text" name="title" id="title" placeholder="Title" class="text-input title">
+        <textarea id="content" name="name" rows="8" cols="80" placeholder="Content" class="text-input"></textarea>
+        <!-- <div>
         <input id="status" type="radio" value="publish">
+        <input id="status" type="radio" value="publish">
+        <input id="status" type="radio" value="publish">
+        </div> -->
         <button type="submit" name="button" onclick="addPost()">Publish</button>
     </form>
     <div id="container">
