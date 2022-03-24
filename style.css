@@ -3,18 +3,25 @@ Theme Name: Wordpress
 Author: Amir Nabizadeh
 */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@100;400&family=Spline+Sans:wght@700&display=swap');
+
+
+/* Body CSS */
 body {
   margin: 0;
   padding: 0;
   display: flex;
+  min-height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100%;
   font-family: 'Abril Fatface', cursive;
   font-family: 'Poppins', sans-serif;
-  font-family: 'Spline Sans', sans-serif;
 }
+
+
+
+
+/* Header CSS */
 header {
   width: 100%;
   height: 100px;
@@ -46,6 +53,12 @@ header {
   text-decoration: none;
   color: black;
 }
+
+
+
+
+
+/* Post CSS */
 .post-card {
   width: 100%;
   max-width: 1280px;
@@ -71,6 +84,35 @@ header {
   padding: 10px;
   border: 1px solid black;
 }
+
+
+
+
+/* Form CSS */
+form {
+  display: flex;
+  flex-direction: column;
+}
+.text-input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ececec;
+  margin-bottom: 20px;
+
+}
+.text-input:hover {
+  box-shadow: 4px 5px 10px 1px gray;
+}
+.title {
+  height: 25px;
+}
+
+
+
+
+
+/* Footer CSS */
 .footer {
   max-width: 1280px;
   width: 100%;
@@ -90,24 +132,10 @@ header {
   height: 30px;
   margin: 10px;
 }
-form {
-  display: flex;
-  flex-direction: column;
-}
-.text-input {
-  padding: 8px;
-  border-radius: 5px;
-  border: none;
-  background-color: #ececec;
-  margin-bottom: 20px;
 
-}
-.text-input:hover {
-  box-shadow: 4px 5px 10px 1px gray;
-}
-.title {
-  height: 25px;
-}
+
+
+
 
 
 /* page css */
