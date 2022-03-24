@@ -25,8 +25,8 @@
 
       <script>
         function deletePost($post_id) {
-          /* var myHeaders = new Headers();
-          myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93b3JkcHJlc3MubG9jYWwiLCJpYXQiOjE2NDc1MTQ5ODMsIm5iZiI6MTY0NzUxNDk4MywiZXhwIjoxNjQ4MTE5NzgzLCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.ZD2QVLLJ5kN6cVFFbrLXfZcoecOYN4JsTF44NeVADic");
+          var myHeaders = new Headers();
+          myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93b3JkcHJlc3MubG9jYWwiLCJpYXQiOjE2NDgxMjMwOTAsIm5iZiI6MTY0ODEyMzA5MCwiZXhwIjoxNjQ4NzI3ODkwLCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.haL4mOLTzCaLRXPbmW6YrUrCmbpzfalRYMIcEdY6bsU");
 
           var requestOptions = {
             method: 'DELETE',
@@ -34,11 +34,11 @@
             redirect: 'follow'
           };
 
-          fetch("http://wordpress.local/wp-json/wp/v2/posts/74", requestOptions)
+          fetch('http://wordpress.local/wp-json/wp/v2/posts/' + $post_id, requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
-            .catch(error => console.log('error', error)); */
-          console.log($post_id)
+            .then(console.log($post_id + " was deleted!"))
+            .catch(error => console.log('error', error));
         }
       </script>
     </section>
