@@ -5,8 +5,6 @@ Template Name: Create page
 ?>
 <?php get_header(); ?>
 <section class="content-section">
-
-
     <h2>Create Post</h2>
     <form class="" action="index.html" method="post">
         <input type="text" name="title" id="title" placeholder="Title">
