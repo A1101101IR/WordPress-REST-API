@@ -89,7 +89,7 @@ header {
 /* CSS for posts */
 .post-body {
   width: 100%;
-  max-width: 1280px;
+  max-width: 600px;
   border: 1px solid red;
   box-shadow: 4px 5px 10px 1px #000;
   margin: 25px;
@@ -97,10 +97,6 @@ header {
   padding-bottom: 10px;
   border-radius: 10px;
 }
-
-
-
-
 
 /* Form CSS */
 form {
