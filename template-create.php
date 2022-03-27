@@ -5,6 +5,8 @@ Template Name: Create page
 ?>
 <?php get_header(); ?>
 <section class="content-section">
+
+
     <h2>Create Post</h2>
     <form method="post" id='addPost' action="wordpress.local/" >
         <!-- input for title, content and status  -->
@@ -13,6 +15,9 @@ Template Name: Create page
         <input type="text" name="status" id="status" placeholder="status" class="text-input title">
         <button type="submit" id="btn" name="button">Publish</button>
     </form>
+
+
+
     <script>
         const addPost = document.getElementById('addPost');
         addPost.addEventListener('submit', function (e) {
@@ -45,5 +50,6 @@ Template Name: Create page
             
         })
     </script>
+    
 </section>
 <?php get_footer(); ?>

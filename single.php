@@ -6,9 +6,12 @@
       <?php if (has_post_thumbnail()) : ?>
         <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
       <?php endif; ?>
-
       <h1><?php the_title(); ?></h1>
 
+
+      <?php the_content(); ?>
+
+      
       <?php
       $firstname = get_the_author_meta('first_name');
       $lastname = get_the_author_meta('last_name');
@@ -18,10 +21,13 @@
         <p><?php echo get_the_date('l jS F, Y'); ?></p>
       </div>
 
-      <?php the_content(); ?>
+
       <?php $post_id = get_the_ID();
       echo "<button onClick=deletePost('$post_id')>Delete</button>";
       ?>
+
+
+
 
       <script>
         /* Get post ID => send delete request => redirect to the website */
@@ -43,6 +49,10 @@
             }, 1000);
         }
       </script>
+
+
+
+
     </section>
 
 <?php endwhile;

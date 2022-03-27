@@ -3,6 +3,9 @@
 <section class="content-body">
   <h1><?php single_cat_title(); ?></h1>
     <!-- Get, Create, Edit and Delete item to/from WP API -->
+
+
+    
     <div class="create-post">
     <h2>Create Post</h2>
     <form method="post" id='addPost' action="wordpress.local/" >
@@ -12,6 +15,10 @@
         <input type="text" name="status" id="status" placeholder="status" class="text-input title">
         <button type="submit" id="btn" name="button">Publish</button>
     </form>
+
+
+
+
     <script>
         const addPost = document.getElementById('addPost');
         addPost.addEventListener('submit', function (e) {
@@ -41,10 +48,11 @@
             setTimeout(() => {
                 window.location='/';
             }, 1000);
-            
         })
     </script>
     </div>
+
+
     <?php if (have_posts()) : while (have_posts()) : the_post();?>
         <div class="post-card">
             <div class="card-img">
@@ -61,6 +69,9 @@
             </div>
         </div>
     <?php endwhile; endif;?>
+
+
+
 </section>
 
 <?php get_footer(); ?>

@@ -80,6 +80,8 @@ Template Name: External data
             }, 300);
         })
 
+        
+
         getPosts();
     </script>
 </section>
