@@ -14,15 +14,14 @@ Template Name: External data
         </form>
     </div>
     <div id="post"></div>
+
+
     <script>
-
-
         /* This will print each post in our array/databas to frontend. */
         async function getPosts() {
             let postData = await fetch('http://localhost:8000/posts');
             let postJson = await postData.json();
             let post = "";
-            console.log(postJson);
             if (postJson) {
                 postJson.slice().reverse().forEach(item => {
                     post += 
@@ -46,15 +45,13 @@ Template Name: External data
             redirect: 'follow'
             };
             fetch(`http://localhost:8000/posts/${id}`, requestOptions)
-            .then(response => response.text())
-            .then(result => console.log("item number " + id + " was deleted!"))
-            .catch(error => console.log('error', error));
+            .then(res => res.text())
+            .catch(error => console.log(error));
             setTimeout(() => {
                 location.reload(); 
             }, 1000);
             console.log("reload!")
         }
-
 
         
         /* Function for add post */
@@ -62,8 +59,6 @@ Template Name: External data
         const myForm = document.getElementById('myForm');
         myForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            var myHeaders = new Headers();
-            myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
             const formData = new FormData(this);
             const input = new URLSearchParams();
             for (const pair of formData) {
@@ -71,14 +66,13 @@ Template Name: External data
             };
             var requestOptions = {
             method: 'POST',
-            headers: myHeaders,
+            headers: {"Content-Type": "application/x-www-form-urlencoded"},
             body: input,
             redirect: 'follow'
             };
             fetch("http://localhost:8000/posts", requestOptions)
-            .then(response => response.text())
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
+            .then(res => res.text())
+            .catch(error => console.log(error));
             setTimeout(() => {
                 location.reload(); 
                 console.log("reload!")
