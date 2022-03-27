@@ -6,8 +6,9 @@ Template Name: External data
 <?php get_header(); ?>
 <section class="content-section">
     
-    <h2>Add Post!</h2>
-    <div>
+    
+    <div class="create-post">
+        <h2>Add Post!</h2>
         <form id='addPost' action="">
         <input type="text" name="title" id="title" placeholder="title" class="text-input title">
         <textarea id="content" name="body" rows="8" cols="80" class="text-input" placeholder="body"></textarea>
@@ -49,8 +50,8 @@ Template Name: External data
             .then(res => res.text())
             .catch(error => console.log(error));
             setTimeout(() => {
-                location.reload(); 
-            }, 1000);
+                getPosts();
+            }, 100);
             console.log("reload!")
         }
 
@@ -74,9 +75,9 @@ Template Name: External data
             .then(res => res.text())
             .catch(error => console.log(error));
             setTimeout(() => {
-                location.reload(); 
+                getPosts();
                 console.log("reload!")
-            }, 1000);
+            }, 300);
         })
 
         getPosts();
