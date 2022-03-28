@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: External data
+Template Name: External API
 */
 ?>
 <?php get_header(); ?>

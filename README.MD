@@ -1,6 +1,6 @@
 # Wordpress Theme 👨🏻‍💻
 
-A Wordpress REST API project, where you can add posts, delete posts, and more in frontend. Several features come with time.
+A Wordpress REST API project, where you can add posts, delete posts, edit post and more in frontend. 🖥
 
 ### Features
 
