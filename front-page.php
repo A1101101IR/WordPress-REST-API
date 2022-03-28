@@ -11,7 +11,7 @@
     <form method="post" id='addPost' action="wordpress.local/" >
         <!-- input for title, content and status  -->
         <input type="text" name="title" id="title" placeholder="Title" class="text-input title">
-        <textarea id="content" name="name" rows="8" cols="80" placeholder="Content" class="text-input"></textarea>
+        <textarea id="content" name="content" rows="8" cols="80" placeholder="Content" class="text-input"></textarea>
         <input type="text" name="status" id="status" placeholder="status" class="text-input title">
         <button type="submit" id="btn" name="button">Publish</button>
     </form>

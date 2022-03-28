@@ -85,4 +85,5 @@ Template Name: External data
         getPosts();
     </script>
 </section>
+
 <?php get_footer(); ?>

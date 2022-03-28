@@ -25,9 +25,11 @@
       <?php $post_id = get_the_ID();
       echo "<button onClick=deletePost('$post_id')>Delete</button>";
       ?>
-
-
-
+      <?php $post_id = get_the_ID();
+      echo "<button onClick=getPostForEdit('$post_id')>Edit</button>";
+      ?>
+      
+      <div id="editFormDiv"></div>
 
       <script>
         /* Get post ID => send delete request => redirect to the website */
@@ -48,6 +50,31 @@
                 window.location='/';
             }, 1000);
         }
+
+        async function getPostForEdit($post_id) {
+          var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+          };
+          let postData = await fetch("http://wordpress.local/wp-json/wp/v2/posts/" + $post_id, requestOptions);
+          let postJson = await postData.json();
+          console.log(postJson);
+          /* let post = '';
+          if (postJson) {
+              
+              post += 
+                      `
+                      <form id='addPost' action="">
+                      <h1></h1>
+                      <input type="text" name="title" id="title" placeholder="title" class="text-input title">
+                      <textarea id="content" name="body" rows="8" cols="80" class="text-input" placeholder="body"></textarea>
+                      <button type="submit">Update post</button>
+                      `;
+              }
+            document.getElementById('editFormDiv').innerHTML = post; */
+        }
+
+        
       </script>
 
 

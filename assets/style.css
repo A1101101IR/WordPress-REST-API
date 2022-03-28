@@ -2,8 +2,7 @@
 Theme Name: Wordpress
 Author: Amir Nabizadeh
 */
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@100;400&family=Spline+Sans:wght@700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@100;400&family=Spline+Sans:wght@700&display=swap");
 
 /* Body CSS */
 body {
@@ -14,12 +13,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Abril Fatface', cursive;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Poppins", sans-serif;
 }
-
-
-
 
 /* Header CSS */
 header {
@@ -33,21 +29,21 @@ header {
   margin-bottom: 15px;
 }
 .navbar-body {
-    width: 100%;
-    max-width: 1280px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .navbar_ul {
-    list-style-type: none;
-    display: flex;
+  list-style-type: none;
+  display: flex;
 }
 .navbar_ul li a {
-    font-size: 18px;
-    margin-left: 35px;
-    text-decoration: none;
-    color: black;
+  font-size: 18px;
+  margin-left: 35px;
+  text-decoration: none;
+  color: black;
 }
 .navbar-body a {
   text-decoration: none;
@@ -61,8 +57,6 @@ header {
   justify-content: center;
   align-items: center;
 }
-
-
 
 /* Post CSS */
 .post-card {
@@ -91,7 +85,6 @@ header {
   padding: 10px;
   border: 1px solid black;
 }
-
 
 /* CSS for posts */
 .post-body {
@@ -124,16 +117,12 @@ form {
   height: 25px;
 }
 
-
-
-
-
 /* Footer CSS */
 .footer {
   max-width: 1280px;
   width: 100%;
 }
-.footer-content{
+.footer-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -148,11 +137,6 @@ form {
   height: 30px;
   margin: 10px;
 }
-
-
-
-
-
 
 /* page css */
 .content-section {

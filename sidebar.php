@@ -1,7 +1,0 @@
-<?php
-/* 
-sidebar
-*/
-<aside>
-
-</aside>
