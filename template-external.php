@@ -56,7 +56,6 @@ Template Name: External API
         }
 
         
-
         const addPost = document.getElementById('addPost');
         addPost.addEventListener('submit', function (e) {
             e.preventDefault();
