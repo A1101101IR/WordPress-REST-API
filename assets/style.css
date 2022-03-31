@@ -16,7 +16,6 @@ body {
   font-family: "Abril Fatface", cursive;
   font-family: "Poppins", sans-serif;
 }
-
 /* Header CSS */
 header {
   width: 100%;
@@ -142,9 +141,11 @@ form {
 .content-section {
   min-width: 400px;
   max-width: 1280px;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .content-section img {
   width: 60%;
@@ -154,4 +155,19 @@ form {
 }
 .post-date-autuor p {
   margin-right: 50px;
+}
+
+button {
+  padding: 8px 14px;
+  border: 2px solid;
+  border-radius: 5px;
+  background-color: white;
+}
+button:hover {
+  box-shadow: 4px 5px 10px 1px gray;
+}
+
+.page-body {
+  max-width: 600px;
+  width: 100%;
 }

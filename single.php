@@ -2,41 +2,46 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <section class="content-section">
-      <?php if (has_post_thumbnail()) : ?>
-        <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
-      <?php endif; ?>
+      <div class="page-body">
+        <?php if (has_post_thumbnail()) : ?>
+          <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+        <?php endif; ?>
 
-      <h1><?php the_title(); ?></h1>
-      <?php the_content(); ?>
+        <h1><?php the_title(); ?></h1>
+        <?php the_content(); ?>
 
 
-      <?php
-      /*
-      <?php
-      $firstname = get_the_author_meta('first_name');
-      $lastname = get_the_author_meta('last_name');
-      ?>
-      <div class="post-date-autuor">
-        <p>Author: <?php echo $firstname; ?> <?php echo $lastname; ?></p>
-        <p><?php echo get_the_date('l jS F, Y'); ?></p>
-      </div>
-      */
-      ?>
-
-      
-      <div class="btn-box">
-        <?php $post_id = get_the_ID();
-        echo "<button onClick=deletePost('$post_id')>Delete</button>";
+        <?php
+        /*
+        <?php
+        $firstname = get_the_author_meta('first_name');
+        $lastname = get_the_author_meta('last_name');
         ?>
-        <?php $post_id = get_the_ID();
-        echo "<button onClick=getPostForEdit('$post_id')>Edit</button>";
+        <div class="post-date-autuor">
+          <p>Author: <?php echo $firstname; ?> <?php echo $lastname; ?></p>
+          <p><?php echo get_the_date('l jS F, Y'); ?></p>
+        </div>
+        */
         ?>
+
+        
+
+        
+        <div class="btn-box">
+          <?php $post_id = get_the_ID();
+          echo "<button onClick=deletePost('$post_id')>Delete</button>";
+          ?>
+          <?php $post_id = get_the_ID();
+          echo "<button onClick=getPostForEdit('$post_id')>Edit</button>";
+          ?>
+        </div>
+        
+        <div id="editFormDiv"></div>
       </div>
       
-      
-      <div id="editFormDiv"></div>
 
       <script>
+        
         /* Get post ID => send delete request => redirect to the website */
         async function getPostForEdit($post_id) {
           /* Step 1 */
@@ -55,6 +60,8 @@
                       <h1></h1>
                       <input type="text" name="title" value="${postJson.title.rendered}" class="text-input title">
                       <input type="text" name="content" value="${postJson.content.rendered}" class="text-input textarea">
+
+                      <div id="textbox" contenteditable="true">${postJson.content.rendered}</div>
                       <button type="submit">Update post</button>
                       </form>
                       `;
@@ -71,7 +78,7 @@
                 };
 
                 var myHeaders = new Headers();
-                myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93b3JkcHJlc3MubG9jYWwiLCJpYXQiOjE2NDgxMjMwOTAsIm5iZiI6MTY0ODEyMzA5MCwiZXhwIjoxNjQ4NzI3ODkwLCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.haL4mOLTzCaLRXPbmW6YrUrCmbpzfalRYMIcEdY6bsU");
+                myHeaders.append("Authorization", "Bearer " + localStorage.getItem("token"));
                 myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
                 var requestOptions = {
@@ -84,8 +91,6 @@
                 .then(res => res.text())
                 .catch(error => console.log(error));
                 setTimeout(() => {
-                    /* TODO byt location to current page! */
-                    /* window.location='/'; */
                     location.reload(); 
                 }, 300);
             })
@@ -93,7 +98,7 @@
 
         function deletePost($post_id) {
           var myHeaders = new Headers();
-          myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93b3JkcHJlc3MubG9jYWwiLCJpYXQiOjE2NDgxMjMwOTAsIm5iZiI6MTY0ODEyMzA5MCwiZXhwIjoxNjQ4NzI3ODkwLCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.haL4mOLTzCaLRXPbmW6YrUrCmbpzfalRYMIcEdY6bsU");
+          myHeaders.append("Authorization", "Bearer " + localStorage.getItem("token"));
           var requestOptions = {
             method: 'DELETE',
             headers: myHeaders,
@@ -108,7 +113,7 @@
                 window.location='/';
             }, 1000);
         }
-
+        
       </script>
     </section>
 

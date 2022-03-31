@@ -20,12 +20,12 @@
 
 
     <script>
+
         const addPost = document.getElementById('addPost');
         addPost.addEventListener('submit', function (e) {
-            
             e.preventDefault();
             var myHeaders = new Headers();
-            myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93b3JkcHJlc3MubG9jYWwiLCJpYXQiOjE2NDgxMjMwOTAsIm5iZiI6MTY0ODEyMzA5MCwiZXhwIjoxNjQ4NzI3ODkwLCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.haL4mOLTzCaLRXPbmW6YrUrCmbpzfalRYMIcEdY6bsU");
+            myHeaders.append("Authorization", "Bearer " + localStorage.getItem("token"));
             myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
    
             const formData = new FormData(this);
@@ -49,6 +49,9 @@
                 window.location='/';
             }, 1000);
         })
+
+
+        
     </script>
     </div>
 

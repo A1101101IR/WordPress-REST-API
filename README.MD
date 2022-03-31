@@ -5,5 +5,5 @@ A Wordpress REST API project, where you can add posts, delete posts, edit post a
 ### Features
 
 - Create Post ✍🏼
+- Edit Post 🔖 🖌
 - Delete Post 🗑
-- Edit Post 🔖

@@ -16,10 +16,11 @@ Template Name: External API
         </form>
     </div>
     <div id="post"></div>
+    
 
 
     <script>
-
+        
 
         async function getPosts() {
             let postData = await fetch('http://localhost:8000/posts');
@@ -84,5 +85,4 @@ Template Name: External API
         getPosts();
     </script>
 </section>
-
 <?php get_footer(); ?>
